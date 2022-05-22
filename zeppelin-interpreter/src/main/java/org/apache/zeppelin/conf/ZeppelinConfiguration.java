@@ -259,7 +259,7 @@ public class ZeppelinConfiguration {
   public long getTime(ConfVars c) {
     try {
       return timeUnitToMill(getString(c.name(), c.getVarName(), ""));
-    } catch (Exception e) {
+    } catch (DateTimeParseException e) {
       return getLong(c);
     }
   }
