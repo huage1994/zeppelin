@@ -46,7 +46,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-zeppelin-
       - name: Install application
-        run: ./mvnw -B install -DskipTests -DskipRat -pl ${INTERPRETERS} -Phadoop2 -Pscala-2.11
+        run: ./mvnw -B -U clean install -DskipTests -DskipRat -pl ${INTERPRETERS} -Phadoop2 -Pscala-2.11
       - name: Run headless test
         run: xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" ./mvnw verify -DskipRat -pl zeppelin-web -Pscala-2.11 -Pweb-e2e -B
       - name: Print zeppelin logs
