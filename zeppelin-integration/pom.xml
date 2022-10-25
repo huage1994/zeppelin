@@ -103,6 +103,7 @@
       <groupId>org.apache.zeppelin</groupId>
       <artifactId>zeppelin-web</artifactId>
       <version>${project.version}</version>
+      <type>war</type>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
